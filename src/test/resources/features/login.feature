@@ -1,3 +1,4 @@
+@smoke @login
 Feature: UPGENIX app login feature
 
   #User Story : As a user, I should be able to log in so that I can land on homepage.
@@ -13,7 +14,7 @@ Feature: UPGENIX app login feature
   Background: for the scenario for this feature file, user is expected to be on the login page
     Given user is on the UPGENIX login page
 
-  @UPG10-346 @login @smoke
+  @UPG10-346
   Scenario Outline:  Login functionality verification
     When user enters username "<username>"
     And user enters password "<password>"
@@ -27,7 +28,7 @@ Feature: UPGENIX app login feature
       | posmanager75@info.com   | posmanager   |
       | posmanager57@info.com   | posmanager   |
 
-  @UPG10-347 @login @smoke
+  @UPG10-347
   Scenario Outline: "Wrong login/password" message should be displayed for
   valid username and invalid password
     When user enters username "<username>"
@@ -42,7 +43,7 @@ Feature: UPGENIX app login feature
       | posmanager75@info.com   | Posmanager   |
       | posmanager57@info.com   | posManager   |
 
-  @UPG10-406 @login @smoke
+  @UPG10-406
   Scenario Outline: "Wrong login/password" message should be displayed for
   invalid username and valid password
     When user enters username "<username>"
@@ -57,7 +58,7 @@ Feature: UPGENIX app login feature
       | posmanager100500@info.com | posmanager   |
       | 1409809184@info.com       | posmanager   |
 
-  @UPG10-349 @login @smoke
+  @UPG10-349
   Scenario Outline: "Please fill out this field" notification message should be displayed
   in absence of user
     When user enters username "<username>"
@@ -71,12 +72,12 @@ Feature: UPGENIX app login feature
       | posmanager75@info.com |              |
 
 
-  @UPG10-350 @login @smoke
+  @UPG10-350
   Scenario: User should see bullet signs instead of actual password characters
     When user "posmanager75@info.com" enters password "posmanager"
     Then user should see the password in bullet signs by default
 
-  @UPG10-354 @login @smoke
+  @UPG10-354
   Scenario: Verify if the ‘Enter’ key of the keyboard is working correctly on the login page.
     When user "salesmanager15@info.com" enters password "salesmanager"
     And press (Enter) key
