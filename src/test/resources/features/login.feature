@@ -77,7 +77,7 @@ Feature: UPGENIX app login feature
     When user "posmanager75@info.com" enters password "posmanager"
     Then user should see the password in bullet signs by default
 
-  @UPG10-354
+  @UPG10-354 @search
   Scenario: Verify if the ‘Enter’ key of the keyboard is working correctly on the login page.
     When user "salesmanager15@info.com" enters password "salesmanager"
     And press (Enter) key
