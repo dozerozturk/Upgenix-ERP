@@ -17,6 +17,7 @@ public class Login_StepDefinitions {
     UserInboxPage userInboxPage = new UserInboxPage();
 
 
+
     @Given("user is on the UPGENIX login page")
     public void user_is_on_the_upgenix_login_page() {
         String url = ConfigReader.getProperty("webLoginPage");
